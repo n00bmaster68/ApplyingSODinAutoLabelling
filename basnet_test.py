@@ -39,14 +39,6 @@ def save_output(image_name,pred,d_dir):
 	image = io.imread(image_name)
 	imo = im.resize((image.shape[1],image.shape[0]),resample=Image.BILINEAR)
 
-	pb_np = np.array(imo)
-
-	aaa = img_name.split(".")
-	bbb = aaa[0:-1]
-	imidx = bbb[0]
-	for i in range(1,len(bbb)):
-		imidx = imidx + "." + bbb[i]
-	imidx = imidx.replace("test_images\\", "")
 	# imo.show()
 	getCoordinate(imo)
 	# imo.save(imidx+'.png')
